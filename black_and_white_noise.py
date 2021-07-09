@@ -6,7 +6,7 @@ import random
 
 # Generate the data
 # Here you can chose the dimension of the grid and the image
-grid_dimension = 10
+grid_dimension = 100
 
 # Here you can chose how many colours you want to have in the grid. Each number equal one colour.
 numbers_grid = [1, 2]
@@ -23,6 +23,7 @@ for _ in range(grid_dimension):
 
 # Plot the data
 # Here you can chose the colours to use in the image. Here there is a list of colours you can use: https://matplotlib.org/stable/gallery/color/named_colors.html
+# Here there are a list of colours: ["white", "green", "black", "orange", "blue", "yellow", "red", "pink"]
 colours_grid = ["white", "black"]
 Cmap = colors.ListedColormap(colours_grid)
 
