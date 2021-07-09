@@ -1,0 +1,1 @@
+These script can be used to generate grids of random dots with different colours, black and white noise, any pixel draws and patterns like a chess board.
