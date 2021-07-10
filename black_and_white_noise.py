@@ -29,6 +29,7 @@ Cmap = colors.ListedColormap(colours_grid)
 
 # Show the image
 plt.imshow(GRID, cmap=Cmap)
+#plt.savefig("media/grid_" + str(grid_dimension) + ".png", format="png")
 plt.show()
 
 # This is a different way to plot the image. Each square will have a black frame. However, it cannot plot more than a 100x100 grid

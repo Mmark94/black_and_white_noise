@@ -33,7 +33,7 @@ You can choose as many colours as you like.
 
 ![grid2](media/Grid_c_1000.png)
 
-You can have a different layout of the block, they can also have a frame.
+You can have change the layout of the blocks, they can also have a frame.
 
 ![grid2](media/Grid_l_10.png)
 
@@ -55,3 +55,26 @@ chess_board.py
 ![grid2](media/chess_board2.png)
 
 ![grid2](media/chess_board3.png)
+
+You can generate many other patterns. You can also create random patterns.
+Pattern_generator.py
+
+![grid_patterns](media/pattern-2.png)
+
+![grid_patterns](media/pattern-4.png)
+
+![grid_patterns](media/pattern-5.png)
+
+![grid_patterns](media/pattern-10.png)
+
+![grid_patterns](media/pattern-13.png)
+
+![grid_patterns](media/pattern-14.png)
+
+![grid_patterns](media/pattern-15.png)
+
+![grid_patterns](media/pattern-17.png)
+
+![grid_patterns](media/pattern-18.png)
+
+![grid_patterns](media/pattern-19.png)
