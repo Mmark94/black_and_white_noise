@@ -1,6 +1,7 @@
 from matplotlib import pyplot as plt
 from matplotlib import colors
 import random
+import math
 
 # In this script there are functions to generate many patterns with white and black blocks
 
@@ -77,6 +78,34 @@ def random_pattern_generator(num_patterns: int, grid_dimension: int, divisors: l
         complex_pattern_generator(grid_dimension, div, rem)
     return None
 
+
+# This function allows you to generate a grid pattern using cos and sen as conditions.
+def circular_pattern_generator(grid_dimension: int):
+    GRID = make_matrix(grid_dimension, grid_dimension)
+
+    # Each block of the grid will have a number (counter)
+    # This will loop for every block in the grid and if it follows the rules, it will colour it in black
+    counter = 0
+    for i in range(grid_dimension):
+        for j in range(grid_dimension):
+            if math.cos(counter) > 0:
+                GRID[i][j] = 1
+            else:
+                GRID[i][j] = 0
+            counter += 1
+
+    # Plot the data
+    # Here you can chose the colours to use in the image. Here there are a list of colours: ["white", "green", "black", "orange", "blue", "yellow", "red", "pink"]
+    colours_grid = ["white", "black"]
+    Cmap = colors.ListedColormap(colours_grid)
+
+    # Show the image
+    plt.imshow(GRID, cmap=Cmap)
+    plt.savefig("patterns/grid_pattern_" + str(grid_dimension) + "_cos" + ".png", format="png")
+    plt.show()
+    plt.close()
+    return None
+
 # test the code
 if __name__ == "__main__":
 
@@ -94,6 +123,7 @@ if __name__ == "__main__":
     # Decide the divisors list
     Numbers = range(1, 31, 1)
     prime_numbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
+    prime_numbers2= [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
     # Decide the remainders list
     Reminders = range(0, 3, 1)
     number_conditions = 3   # Decide how many conditions you want to use to generate the patter
@@ -102,3 +132,6 @@ if __name__ == "__main__":
     grid_dimension = 25   # Decide the grid dimension
 
     random_pattern_generator(num_patterns=num_patterns, grid_dimension=grid_dimension, divisors=prime_numbers, remainders=Reminders, number_conditions=number_conditions)
+
+    # Test the function circular_pattern_generator
+    #circular_pattern_generator(100)

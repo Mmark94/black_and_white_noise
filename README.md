@@ -13,7 +13,7 @@ In the example there are grids of 10x10, 100x100 and 1000x1000
 ![grid3](media/Grid_1000.png)
 
 
-You can set a different probability to  each colour.
+You can set a different probability for each colour.
 In the example I set probability 100:1, 10:1, 1:1, 1:10 and 1:100
 ![grid1](media/Grid_p_500_100_1.png)
 
@@ -24,6 +24,14 @@ In the example I set probability 100:1, 10:1, 1:1, 1:10 and 1:100
 ![grid1](media/Grid_p_500_1_10.png)
 
 ![grid1](media/Grid_p_500_1_100.png)
+
+You can also set a gradient of probability for each colour.
+
+![grid1](media/Grid_100_5.png)
+
+![grid1](media/Grid_100_10.png)
+
+![grid1](media/Grid_100_12.png)
 
 You can choose as many colours as you like.
 
@@ -78,3 +86,9 @@ Pattern_generator.py
 ![grid_patterns](media/pattern-18.png)
 
 ![grid_patterns](media/pattern-19.png)
+
+You can also use trigonometric functions (cos(x), sin(x)) to generate a pattern.
+
+![grid_patterns](media/pattern-cos.png)
+
+![grid_patterns](media/pattern-cos3_cube.png)
