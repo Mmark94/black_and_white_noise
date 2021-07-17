@@ -26,12 +26,38 @@ In the example I set probability 100:1, 10:1, 1:1, 1:10 and 1:100
 ![grid1](media/Grid_p_500_1_100.png)
 
 You can also set a gradient of probability for each colour.
+black_and_white_noise_probabilities.py
 
-![grid1](media/Grid_100_5.png)
+![grid1](media/grid_100_gradient0.1_w1_b500.png)
 
-![grid1](media/Grid_100_10.png)
+![grid1](media/grid_100_gradient-0.0001_w1_b1.png)
 
-![grid1](media/Grid_100_12.png)
+![grid1](media/grid_500_gradient0.0002_w1_b25.png)
+
+![grid1](media/grid_1000_gradient0.0001_w1_b25.png)
+
+![grid1](media/grid_1000_gradient-1e-06_w1_b1.png)
+
+
+You can set how much connectivity there is in the black and white noise.
+For instance, high connectivity means that the probability of a square being of a colours, it is higher if the previous square is the same colour (positive feedback).
+Low connectivity means that the probability of a square being of a colours, it is higher if the previous square is a different colour (negative feedback).
+black_and_white_noise_probabilities.py
+
+high connectivity
+![gridp](media/Grid_100_p5.png)
+
+low connectivity
+![gridp](media/Grid_100_p9.png)
+
+with different grid dimensions
+![gridp](media/Grid_100_p16.png)
+
+![gridp](media/Grid_100_p18.png)
+
+![gridp](media/Grid_100_p22.png)
+
+![gridp](media/Grid_100_p20.png)
 
 You can choose as many colours as you like.
 
