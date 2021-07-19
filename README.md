@@ -1,4 +1,4 @@
-These scripts can be used to generate grids of random dots with different colours, black and white noise, any pixel draws and patterns like a chess board.
+These scripts can generate grids of random dots with different colours, black and white noise, any pixel draws and patterns like a chess board.
 
 
 Black and white noise
@@ -40,8 +40,8 @@ black_and_white_noise_probabilities.py
 
 
 You can set how much connectivity there is in the black and white noise.
-For instance, high connectivity means that the probability of a square being of a colours, it is higher if the previous square is the same colour (positive feedback).
-Low connectivity means that the probability of a square being of a colours, it is higher if the previous square is a different colour (negative feedback).
+For example, high connectivity means that the probability of a square being one colour is greater if the previous square is the same colour (positive feedback).
+Low connectivity means that the probability of a square being one colour is greater if the previous square is a different colour (negative feedback).
 black_and_white_noise_probabilities.py
 
 high connectivity
@@ -67,7 +67,7 @@ You can choose as many colours as you like.
 
 ![grid2](media/Grid_c_1000.png)
 
-You can have change the layout of the blocks, they can also have a frame.
+You can change the layout of the blocks; they can also have a frame.
 
 ![grid2](media/Grid_l_10.png)
 
@@ -81,7 +81,7 @@ draw_with_grid.py
 ![grid2](media/draw1.png)
 
 You can also generate a pattern.
-In the example I generated a chess board pattern.
+In the example, I generated a chessboard pattern.
 chess_board.py
 
 ![grid2](media/chess_board.png)
