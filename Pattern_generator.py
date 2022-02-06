@@ -10,7 +10,7 @@ def make_matrix(x, y):
     return [[0]*y for _ in range(x)]
 
 # This function allows you to generate a grid pattern where a block is in black if the block number divided by a divisor is equal to a remainder.
-def simple_pattern_generator(grid_dimension: int, divisors: int, remainders: int):
+def simple_pattern_generator(grid_dimension: int, divisors: int, remainders: int, Show=False):
     GRID = make_matrix(grid_dimension, grid_dimension)
 
     # Each block of the grid will have a number (counter)
@@ -31,14 +31,19 @@ def simple_pattern_generator(grid_dimension: int, divisors: int, remainders: int
     Cmap = colors.ListedColormap(colours_grid)
 
     # Show the image
+    plt.figure(figsize=(20, 20))
     plt.imshow(GRID, cmap=Cmap)
-    plt.savefig("patterns/grid_pattern_" + str(grid_dimension) + "_d_" + str(divisors) + "_r_" + str(remainders) + ".png", format="png")
-    #plt.show()
+    #plt.axis('off')
+    plt.xticks(color='w')
+    plt.yticks(color='w')
+    plt.savefig("patterns/grid_pattern_" + str(grid_dimension) + "_d_" + str(divisors) + "_r_" + str(remainders) + ".png", format="png", dpi=300)
+    if Show:
+        plt.show()
     plt.close()
     return None
 
 # This function is similar to the previous function, but it allows you to choose many divisors and remainders. It the block number satisfied one of the conditions (OR), it will colour it in black.
-def complex_pattern_generator(grid_dimension: int, divisors: list, remainders: list):
+def complex_pattern_generator(grid_dimension: int, divisors: list, remainders: list, Show=False):
     GRID = make_matrix(grid_dimension, grid_dimension)
 
     # Each block of the grid will have a number (counter)
@@ -59,14 +64,19 @@ def complex_pattern_generator(grid_dimension: int, divisors: list, remainders: l
     # print(GRID)
 
     # Plot the data
+    plt.figure(figsize=(20, 20))
     # Here you can chose the colours to use in the image. Here there are a list of colours: ["white", "green", "black", "orange", "blue", "yellow", "red", "pink"]
     colours_grid = ["white", "black"]
     Cmap = colors.ListedColormap(colours_grid)
 
     # Show or save the image
     plt.imshow(GRID, cmap=Cmap)
-    plt.savefig("complex_patterns/grid_pattern_" + str(grid_dimension) + "_d_" + str(divisors) + "_r_" + str(remainders) + ".png", format="png")
-    #plt.show()
+    #plt.axis('off')
+    plt.xticks(color='w')
+    plt.yticks(color='w')
+    plt.savefig("complex_patterns/grid_pattern_" + str(grid_dimension) + "_d_" + str(divisors) + "_r_" + str(remainders) + ".png", format="png", dpi=300)
+    if Show:
+        plt.show()
     plt.close()
     return None
 
@@ -95,13 +105,17 @@ def circular_pattern_generator(grid_dimension: int):
             counter += 1
 
     # Plot the data
+    plt.figure(figsize=(20, 20))
     # Here you can chose the colours to use in the image. Here there are a list of colours: ["white", "green", "black", "orange", "blue", "yellow", "red", "pink"]
     colours_grid = ["white", "black"]
     Cmap = colors.ListedColormap(colours_grid)
 
     # Show the image
     plt.imshow(GRID, cmap=Cmap)
-    plt.savefig("patterns/grid_pattern_" + str(grid_dimension) + "_cos" + ".png", format="png")
+    #plt.axis('off')
+    plt.xticks(color='w')
+    plt.yticks(color='w')
+    plt.savefig("patterns/grid_pattern_" + str(grid_dimension) + "_cos" + ".png", format="png", dpi=300)
     plt.show()
     plt.close()
     return None
@@ -117,7 +131,7 @@ if __name__ == "__main__":
             simple_pattern_generator(20, d, r)
     """
     # Test the function complex_pattern_generator
-    #complex_pattern_generator(100, [2, 5, 3, 5], [5, 1, 2, 3])
+    complex_pattern_generator(100, [2, 5, 3, 5], [5, 1, 2, 3], Show=True)
 
     # Test the function random_pattern_generator
     # Decide the divisors list

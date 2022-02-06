@@ -33,6 +33,9 @@ for i in range(dimension):
 Cmap = colors.ListedColormap(colours_grid)
 
 # Show the image
+plt.figure(figsize=(20, 20))
 plt.imshow(chessboard, cmap=Cmap)
-#plt.savefig("media/chessboard.png", format="png")
+plt.xticks(color='w')
+plt.yticks(color='w')
+#plt.savefig("media/chessboard.png", format="png", dpi=300)
 plt.show()

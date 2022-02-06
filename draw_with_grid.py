@@ -21,8 +21,14 @@ colours_grid = ["white", "black"]
 Cmap = colors.ListedColormap(colours_grid)
 
 # Show the image
+plt.figure(figsize=(20, 20))
 plt.imshow(smile, cmap=Cmap)
+#plt.axis('off')
+plt.xticks(color='w')
+plt.yticks(color='w')
+plt.savefig("media/smile.png", format="png", dpi=300)
 plt.show()
+plt.close()
 
 
 # This is a different draw as an example.
@@ -45,5 +51,11 @@ colours_grid = ["white", "black"]
 Cmap = colors.ListedColormap(colours_grid)
 
 # Show the image
+plt.figure(figsize=(20, 20))
 plt.imshow(GRID, cmap=Cmap)
+#plt.axis('off')
+plt.xticks(color='w')
+plt.yticks(color='w')
+plt.savefig("media/flower.png", format="png", dpi=300)
 plt.show()
+plt.close()

@@ -27,8 +27,12 @@ def random_gradient(grid_dimension: int, white: int, black: int, gradient=1):
     Cmap = colors.ListedColormap(colours_grid)
 
     # Show the image
+    plt.figure(figsize=(20, 20))
     plt.imshow(GRID, cmap=Cmap)
-    plt.savefig("pattern_from_random/grid_" + str(grid_dimension) + "_gradient" + str(gradient) + "_w" + str(white_0) + "_b" + str(black_0) + ".png", format="png")
+    #plt.axis('off')
+    plt.xticks(color='w')
+    plt.yticks(color='w')
+    plt.savefig("pattern_from_random/grid_" + str(grid_dimension) + "_gradient" + str(gradient) + "_w" + str(white_0) + "_b" + str(black_0) + ".png", format="png", dpi=300)
     plt.show()
     plt.close()
     return None
@@ -62,9 +66,13 @@ def random_connectivity(grid_dimension: int, white: int, black: int, connection=
     Cmap = colors.ListedColormap(colours_grid)
 
     # Show the image
+    plt.figure(figsize=(20, 20))
     plt.imshow(GRID, cmap=Cmap)
-    plt.savefig("pattern_from_random/grid_" + str(grid_dimension) + "_c" + str(connection) + "_w" + str(white) + "_b" + str(black) + ".png", format="png")
-    #plt.show()
+    #plt.axis('off')
+    plt.xticks(color='w')
+    plt.yticks(color='w')
+    plt.savefig("pattern_from_random/grid_" + str(grid_dimension) + "_c" + str(connection) + "_w" + str(white) + "_b" + str(black) + ".png", format="png", dpi=300)
+    plt.show()
     plt.close()
     return None
 
@@ -72,14 +80,15 @@ def random_connectivity(grid_dimension: int, white: int, black: int, connection=
 # test the code
 if __name__ == "__main__":
 
-    #random_connectivity(grid_dimension=500, white=10, black=10, connection=1)
+    random_connectivity(grid_dimension=300, white=10, black=10, connection=1)
+    random_connectivity(grid_dimension=100, white=10, black=10, connection=2)
 
     W = range(1, 22, 3)
     B = range(1, 22, 3)
     """
     for w in W:
         for b in B:
-            random_connectivity(grid_dimension=200, white=w, black=b, connection=1)
+            random_connectivity(grid_dimension=200, white=w, black=b, connection=2)
     """
 
     random_gradient(grid_dimension=500, white=1, black=25, gradient=0.0003)

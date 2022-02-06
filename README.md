@@ -1,5 +1,6 @@
 These scripts can generate grids of random dots with different colours, black and white noise, any pixel draws and patterns like a chess board.
 
+I put some of these designs also on objects like t-shirt, hats, mugs, puzzles, pillows, buttons, etc. You can find them here: https://www.redbubble.com/people/Mmark94/shop?asc=u
 
 Black and white noise
 black_and_white_noise.py
@@ -66,6 +67,8 @@ You can choose as many colours as you like.
 ![grid2](media/Grid_c_100_1.png)
 
 ![grid2](media/Grid_c_1000.png)
+
+![grid2](media/grid_100_yellow.png)
 
 You can change the layout of the blocks; they can also have a frame.
 
